@@ -1,0 +1,35 @@
+<html>
+<head>
+	
+<title></title>
+
+</head>
+<body>
+
+<h1>Search for employees</h1>
+
+<form method="GET" action="http://ecwm604/w1184052/index.php/find/findemp">
+last name <input type=text name="lastname">
+<input type=submit>
+</form>
+<?php
+
+if (isset($user)) {
+foreach ($user as $res) {
+
+echo "employee id =" .$res['emp_no']; ?> <br> <?php
+echo "first name = " .$res['first_name']; ?> <br> <?php
+echo "last name = " .$res['last_name']; ?> <br> <?php
+echo "title = " .$res['title']; ?> <br> <?php
+echo "department no = " .$res['dept_no']; ?> <br><br> <?php  
+//asdfg
+}
+
+//echo "to display".$name;
+}
+//print_r($entry);
+//print_r($user);
+?>
+
+</body>
+</html>
